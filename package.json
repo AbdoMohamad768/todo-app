@@ -1,0 +1,14 @@
+{
+  "name": "task-traker",
+  "version": "1.0.0",
+  "description": "Simple todo app",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Abdo Mohamad",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.12.0"
+  }
+}

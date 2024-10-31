@@ -6,7 +6,8 @@
 
 body {
   font-family: "Work Sans", sans-serif;
-  height: 100vh;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 ul {
@@ -20,11 +21,17 @@ button {
 }
 
 main {
-  width: 768px;
+  max-width: 768px;
   padding: 40px 90px;
   margin: 20px auto 0;
   border: 3px solid black;
   border-radius: 20px;
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  main {
+    margin: 10px;
+    padding: 30px;
+  }
 }
 
 form {
@@ -93,6 +100,12 @@ li label div {
   top: 50%;
   transform: translateY(-50%);
 }
+@media (min-width: 320px) and (max-width: 767px) {
+  li label div {
+    width: 20px;
+    height: 20px;
+  }
+}
 li label input:checked + div {
   background-color: #777;
 }
@@ -103,6 +116,11 @@ li p {
 li p.complete {
   color: #777;
   text-decoration: line-through;
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  li p {
+    font-size: 15px;
+  }
 }
 li i {
   font-size: 20px;

@@ -1,3 +1,15 @@
+@mixin media($screen) {
+  @if ($screen == "mobile") {
+    @media (min-width: 320px) and (max-width: 767px) {
+      @content;
+    }
+  } @else {
+    @media (min-width: 768px) {
+      @content;
+    }
+  }
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -6,7 +18,7 @@
 
 body {
   font-family: "Work Sans", sans-serif;
-  height: 100vh;
+  height: fit-content;
 }
 
 ul {
@@ -20,11 +32,17 @@ button {
 }
 
 main {
-  width: 768px;
+  max-width: 768px;
+  // max-width: 100%;
   padding: 40px 90px;
   margin: 20px auto 0;
   border: 3px solid black;
   border-radius: 20px;
+
+  @include media("mobile") {
+    margin: 10px;
+    padding: 30px;
+  }
 }
 
 form {
@@ -90,6 +108,11 @@ li {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
+
+      @include media("mobile") {
+        width: 20px;
+        height: 20px;
+      }
     }
     input:checked + div {
       background-color: #777;
@@ -102,6 +125,10 @@ li {
     &.complete {
       color: #777;
       text-decoration: line-through;
+    }
+
+    @include media("mobile") {
+      font-size: 15px;
     }
   }
 

@@ -27,7 +27,7 @@ main {
   border: 3px solid black;
   border-radius: 20px;
 }
-@media (min-width: 320px) and (max-width: 767px) {
+@media (max-width: 767px) {
   main {
     margin: 10px;
     padding: 30px;
@@ -100,7 +100,7 @@ li label div {
   top: 50%;
   transform: translateY(-50%);
 }
-@media (min-width: 320px) and (max-width: 767px) {
+@media (max-width: 767px) {
   li label div {
     width: 20px;
     height: 20px;
@@ -117,7 +117,7 @@ li p.complete {
   color: #777;
   text-decoration: line-through;
 }
-@media (min-width: 320px) and (max-width: 767px) {
+@media (max-width: 767px) {
   li p {
     font-size: 15px;
   }

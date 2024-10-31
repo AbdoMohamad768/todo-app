@@ -2,9 +2,9 @@
   "name": "task-traker",
   "version": "1.0.0",
   "description": "Simple todo app",
-  "main": "index.html",
+  "default": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "parcel build index.html --dist-dir ./dist"
   },
   "author": "Abdo Mohamad",
   "license": "ISC",
